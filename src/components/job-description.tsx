@@ -110,7 +110,10 @@ function JobRequirements() {
           {item.id === 1 ? (
             <div className="flex flex-col gap-y-2">
               {item.badges?.map((badge) => (
-                <div className="flex items-center gap-x-1 rounded-lg border w-fit px-1.5 py-[3px] border-[#D0D5DD]">
+                <div
+                  className="flex items-center gap-x-1 rounded-lg border w-fit px-1.5 py-[3px] border-[#D0D5DD]"
+                  key={badge.label}
+                >
                   <Image src={badge.icon} alt="badge" width={15} height={15} />
                   <p className="text-xs">{badge.label}</p>
                 </div>
