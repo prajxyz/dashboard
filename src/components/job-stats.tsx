@@ -41,10 +41,13 @@ export default function JobStats() {
         </button>
       </div>
 
-      <div className="flex flex-col gap-y-5 px-12 my-8">
+      <div className="flex flex-col gap-y-5 px-14 my-8">
         {data.map((item) => (
           <>
-            <div className="flex items-center justify-between ">
+            <div
+              className="flex items-center justify-between "
+              key={item.label}
+            >
               <div className="flex items-center gap-x-2 text-[#4F4F4F] flex-grow">
                 {item.icon}
                 <p className="text-sm">{item.label}</p>
