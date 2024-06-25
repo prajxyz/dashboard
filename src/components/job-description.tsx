@@ -104,7 +104,7 @@ function JobRequirements() {
   return (
     <div className="flex items-start justify-between py-8 px-14 w-3/4">
       {requirements.map((item) => (
-        <div>
+        <div key={item.id}>
           <h4 className="text-[#6E6D6D] text-sm pb-1.5">{item.heading}</h4>
 
           {item.id === 1 ? (
@@ -142,7 +142,7 @@ function AboutTheJob() {
 
       <div className="flex flex-col">
         {about.map((item, idx) => (
-          <p className="flex items-center gap-x-1 text-sm py-[3px]">
+          <p className="flex items-center gap-x-1 text-sm py-[3px]" key={idx}>
             {idx + 1}.<p>{item}</p>
           </p>
         ))}
@@ -151,7 +151,7 @@ function AboutTheJob() {
       <h4 className="text-sm py-[3px]">Benefits</h4>
       <div className="flex flex-col">
         {benefits.map((item) => (
-          <p className="flex items-center gap-x-1 text-sm py-[3px]">
+          <p className="flex items-center gap-x-1 text-sm py-[3px]" key={item}>
             <GoDotFill size={8} />
             <p>{item}</p>
           </p>
@@ -168,7 +168,7 @@ function AboutTheJob() {
       <h4 className="text-sm py-[3px]">Supplemental pay types:</h4>
       <div className="flex flex-col">
         {suppliements.map((item) => (
-          <p className="flex items-center gap-x-1 text-sm py-[3px]">
+          <p className="flex items-center gap-x-1 text-sm py-[3px]" key={item}>
             <GoDotFill size={8} />
             <p>{item}</p>
           </p>
